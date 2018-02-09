@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Task;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class TasksController extends Controller
@@ -14,9 +15,10 @@ class TasksController extends Controller
      */
     public function index()
     {
-        $tasks = Task::all();
+        $tasks = Task::where('done_at', null)->get();
+        $finishedTasks = Task::finished()->get(); // whereNotNull('done_at')
 
-        return view('todo', ['tasks' => $tasks]);
+        return view('todo', ['tasks' => $tasks, 'finishedTasks' => $finishedTasks]);
     }
 
     /**
@@ -34,6 +36,20 @@ class TasksController extends Controller
         Task::create([
             'subject' => $attributes['subject'],
         ]);
+
+        return redirect()->route('tasks');
+    }
+
+    /**
+     * @param Task $task
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update(Task $task, Request $request)
+    {
+        $task->fill([
+            'done_at' => $request->done ? Carbon::now() : null,
+        ])->update();
 
         return redirect()->route('tasks');
     }
