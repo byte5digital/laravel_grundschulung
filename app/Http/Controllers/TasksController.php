@@ -33,9 +33,11 @@ class TasksController extends Controller
             'subject' => 'required|min:5',
         ]);
 
-        Task::create([
+        $task = new Task([
             'subject' => $attributes['subject'],
         ]);
+        $task->user()->associate(\Auth::user());
+        $task->save();
 
         return redirect()->route('tasks');
     }
