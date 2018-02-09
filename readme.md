@@ -24,5 +24,5 @@
 2. Füge der ToDo-App eine User Authentifizierung hinzu und füge die Tasks dem Autor hinzu.
     - [x] Erstelle eine User-Authentifizierung
     - [x] Erstelle eine Relation zwischen `Task` und `User`
-    - [ ] Ändere die zuvor erstellten Routes, sodass nur noch authentifizierte User zugriff haben
+    - [x] Ändere die zuvor erstellten Routes, sodass nur noch authentifizierte User zugriff haben
     - [ ] Ändere den `TasksController`, sodass ein erstellte `Task` einem User hinzugefügt wird
