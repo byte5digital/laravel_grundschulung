@@ -26,5 +26,5 @@
     - [x] Erstelle eine Relation zwischen `Task` und `User`
     - [x] Ändere die zuvor erstellten Routes, sodass nur noch authentifizierte User zugriff haben
     - [x] Ändere den `TasksController`, sodass ein erstellte `Task` einem User hinzugefügt wird
-    - [ ] Ändere den `todo` - view ab, sodass der Ersteller der Task angezeigt wird
+    - [x] Ändere den `todo` - view ab, sodass der Ersteller der Task angezeigt wird
     - [ ] Füge eine weitere Relation zwischen `Task` und `User` hinzu, die den User angibt welcher die Task erledigt
