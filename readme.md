@@ -1,6 +1,6 @@
 # Grundschulung Laravel
 ## Aufgaben
-1. Erstelle eine simple ToDo App. Die App soll es ermöglichen eine einfache ToDo-Liste zu erstellen 
+~ ~1. Erstelle eine simple ToDo App. Die App soll es ermöglichen eine einfache ToDo-Liste zu erstellen 
    und anzuzeigen. Eine Aufgabe besteht aus einem Text und einem Datum an welchem die Task erledigt wurde.
     - [x] erstelle eine Form in einem `todo.blade.php` view
     - [x] erstelle ein `Task` - Model
@@ -19,6 +19,9 @@
         + die Anzeige der bestehenden Tasks abändern => Form zum updaten hinzufügen
         + route zum Updaten hinzufügen
         + `update` Funktion zum `TaskController` hinzufügen
-        + Anzeige von erledigten Task hinzufügen
+        + Anzeige von erledigten Task hinzufügen~ ~
     
-    
+2. Füge der ToDo-App eine User Authentifizierung hinzu und füge die Tasks dem Autor hinzu.
+    - [ ] Erstelle eine User-Authentifizierung
+    - [ ] Erstelle eine Relation zwischen `Task` und `User`
+    - [ ] Ändere die zuvor erstellten Routes, sodass nur noch authentifizierte User zugriff haben
