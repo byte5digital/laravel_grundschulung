@@ -9,7 +9,7 @@
         + `touch database/database.sqlite`
         + change .env DB_CONNECTION=sqlite
         + comment out .env DB_DATABASE
-    - [ ] erstelle einen `TasksController` und implementiere die index/store Funktionalität
+    - [x] erstelle einen `TasksController` und implementiere die index/store Funktionalität
     - [ ] Erstelle die routes um...
         + den todo view anzuzeigen
         + den Request welcher über die todo-Form versendet wird an den `TasksController` weiterleiten
