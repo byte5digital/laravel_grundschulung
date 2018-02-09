@@ -17,7 +17,7 @@
                             <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
                                 <input type="checkbox" class="form-check-input" name="done">
                                 <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">{{ $task->user->name.' - '.$task->subject }}</span>
+                                <span class="custom-control-description">{{ $task->subject }} - erstellt von <b>{{ $task->creator->name }}</b></span>
                             </label>
 
                             <button type="submit" class="btn btn-link">Update</button>
@@ -53,7 +53,7 @@
                             <li>
                                 <p>
                                     {{ $task->subject }} - {{ $task->done_at->format('d.m.Y H:m:s') }} |
-                                    Erledigt von <b>{{ $task->user->name }}</b>
+                                    Erledigt von <b>{{ $task->worker->name }}</b>
                                 </p></li>
                         @endforeach
                     </ul>

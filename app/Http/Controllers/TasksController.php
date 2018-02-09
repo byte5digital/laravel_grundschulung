@@ -36,7 +36,7 @@ class TasksController extends Controller
         $task = new Task([
             'subject' => $attributes['subject'],
         ]);
-        $task->user()->associate(\Auth::user());
+        $task->creator()->associate(\Auth::user());
         $task->save();
 
         return redirect()->route('tasks');
@@ -49,6 +49,7 @@ class TasksController extends Controller
      */
     public function update(Task $task, Request $request)
     {
+        $task->worker()->associate(\Auth::user());
         $task->fill([
             'done_at' => $request->done ? Carbon::now() : null,
         ])->update();

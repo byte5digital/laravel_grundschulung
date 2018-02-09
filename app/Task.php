@@ -26,11 +26,21 @@ class Task extends Model
     }
 
     /**
-     * Get the user of this task.
+     * Get the creator of this task.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function user()
+    public function creator()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Get the worker of this task.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function worker()
     {
         return $this->belongsTo(User::class);
     }
