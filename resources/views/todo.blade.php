@@ -2,7 +2,7 @@
 <html>
 <body>
     <div class="container">
-        <form action="" method="POST">
+        <form action="{{ route('tasks.store') }}" method="POST">
             @csrf
 
             <div class="form-group">

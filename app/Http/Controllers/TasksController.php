@@ -33,6 +33,6 @@ class TasksController extends Controller
             'subject' => $attributes['subject'],
         ]);
 
-        return view('todo');
+        return redirect()->route('tasks');
     }
 }
