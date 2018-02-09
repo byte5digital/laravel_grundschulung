@@ -13,6 +13,12 @@
     - [x] Erstelle die routes um...
         + den todo view anzuzeigen
         + den Request welcher über die todo-Form versendet wird an den `TasksController` weiterleiten
-    - [ ] Zeige erstellte Aufgaben in dem `todo`-view an
+    - [x] Zeige erstellte Aufgaben in dem `todo`-view an
+    - [ ] Ändere den `todo` - view so ab, dass dieser die Fehler der Validierung im `TasksController` anzeigt
+    - [ ] Füge eine update Funktion hinzu, in der das `done_at` Feld gesetzt wird
+        + die Anzeige der bestehenden Tasks abändern => Form zum updaten hinzufügen
+        + route zum Updaten hinzufügen
+        + `update` Funktion zum `TaskController` hinzufügen
+        + Anzeige von erledigten Task hinzufügen
     
     
