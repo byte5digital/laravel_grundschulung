@@ -24,4 +24,14 @@ class Task extends Model
     {
         return $query->whereNotNull('done_at');
     }
+
+    /**
+     * Get the user of this task.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
