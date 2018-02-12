@@ -25,7 +25,7 @@ class Task extends Model implements SearchableContract
     {
         return $query->whereNotNull('done_at');
     }
-    
+
     /**
      * Get the creator of this task.
      *

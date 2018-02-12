@@ -27,6 +27,8 @@ class TasksController extends Controller
         $task->creator()->associate(\Auth::user());
         $task->save();
 
+        \SearchIndex::upsertToIndex($task);
+
         return response()->json($task);
     }
 
