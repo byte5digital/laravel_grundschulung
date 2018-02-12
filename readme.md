@@ -1,20 +1,10 @@
 # Grundschulung Laravel
 ## Aufgaben
-3. Ergänze die ToDo-App mit Vuejs um die Forms dynamisch zu gestalten
-    - [x] erweitere den aktuellen `todo`-view um das `app`-layout
-    - [x] ersetzte die update form durch eine Vue-`Task`-Component
-    - [x] nutze die `api`-route und füge eine Task-Update route hinzu
-    - [x] füge der `api`-route eine Middleware Group hinzu
-        + Hinweis: zum authentifizieren über die API wird nach einem `api_token` im request geschaut
-          und der `User` anhand des tokens gesucht.
-    - [x] ersetzte das Formular zum erstellen einer ToDo mit einer Vue-Componente
-    - [x] ersetzte die Auflistung der Erledigten ToDos durch eine Vue-Componente
-    - [x] erstelle einen Event-Bus welcher die Kommunikation zwischen den verschiedenen Komponenten ermöglicht
-        + erstelle eine `event.js` Datei mit den Event-Bus Funktionen => füge diese einer `window.Event` variable hinzu
-        + Feuer ein `todo-created` Event nach dem erstellen eines Events und "höre" auf das Event in der `TaskComponent`
-          um daraufhin die Task zu den bestehenden hinzuzufügen
-        + Feuer ein `todo-done` Event wenn eine Aufgabe in der ToDo Liste erledigt wird
-        + reagiere auf das `todo-done` Event und füge die erhaltene Task den `tasks-done` hinzu
+4. Im 4. Part erweitern wir die ToDo-App um eine Suchfunktion
+    - [ ] Einrichtung des [`tamayo/laravel-scout-elastic`](https://github.com/ErickTamayo/laravel-scout-elastic) packages
+    - [ ] Indexierung der vorhandenen Daten via `scout:import`
+    - [ ] Vue-`SearchComponent` erstellen welche über die API sucht
+    
 
 ~ ~1. Erstelle eine simple ToDo App. Die App soll es ermöglichen eine einfache ToDo-Liste zu erstellen 
    und anzuzeigen. Eine Aufgabe besteht aus einem Text und einem Datum an welchem die Task erledigt wurde.
@@ -44,3 +34,19 @@
     - [x] Ändere den `TasksController`, sodass ein erstellte `Task` einem User hinzugefügt wird
     - [x] Ändere den `todo` - view ab, sodass der Ersteller der Task angezeigt wird
     - [x] Füge eine weitere Relation zwischen `Task` und `User` hinzu, die den User angibt welcher die Task erledigt~ ~
+    
+~ ~3. Ergänze die ToDo-App mit Vuejs um die Forms dynamisch zu gestalten
+    - [x] erweitere den aktuellen `todo`-view um das `app`-layout
+    - [x] ersetzte die update form durch eine Vue-`Task`-Component
+    - [x] nutze die `api`-route und füge eine Task-Update route hinzu
+    - [x] füge der `api`-route eine Middleware Group hinzu
+        + Hinweis: zum authentifizieren über die API wird nach einem `api_token` im request geschaut
+          und der `User` anhand des tokens gesucht.
+    - [x] ersetzte das Formular zum erstellen einer ToDo mit einer Vue-Componente
+    - [x] ersetzte die Auflistung der Erledigten ToDos durch eine Vue-Componente
+    - [x] erstelle einen Event-Bus welcher die Kommunikation zwischen den verschiedenen Komponenten ermöglicht
+        + erstelle eine `event.js` Datei mit den Event-Bus Funktionen => füge diese einer `window.Event` variable hinzu
+        + Feuer ein `todo-created` Event nach dem erstellen eines Events und "höre" auf das Event in der `TaskComponent`
+          um daraufhin die Task zu den bestehenden hinzuzufügen
+        + Feuer ein `todo-done` Event wenn eine Aufgabe in der ToDo Liste erledigt wird
+        + reagiere auf das `todo-done` Event und füge die erhaltene Task den `tasks-done` hinzu~ ~
