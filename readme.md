@@ -1,7 +1,7 @@
 # Grundschulung Laravel
 ## Aufgaben
 4. Im 4. Part erweitern wir die ToDo-App um eine Suchfunktion
-    - [ ] Einrichtung des [`spatie/searchindex`](https://github.com/spatie/searchindex) packages
+    - [x] Einrichtung des [`spatie/searchindex`](https://github.com/spatie/searchindex) packages
         + braucht auch `composer require elasticsearch/elasticsearch "^1.3"`
     - [ ] Indexierung der vorhandenen Daten via `tinker` / on create
     - [ ] Vue-`SearchComponent` erstellen welche über die API sucht
