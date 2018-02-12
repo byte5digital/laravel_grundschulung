@@ -5,8 +5,16 @@
     - [ ] ersetzte die update form durch eine Vue-`Task`-Component
     - [ ] nutze die `api`-route und füge eine Task-Update route hinzu
     - [ ] füge der `api`-route eine Middleware Group hinzu
-        + hinweis: zum authentifizieren über die API wird nach einem `api_token` im request gesucht
+        + Hinweis: zum authentifizieren über die API wird nach einem `api_token` im request geschaut
           und der `User` anhand des tokens gesucht.
+    - [ ] ersetzte das Formular zum erstellen einer ToDo mit einer Vue-Componente
+    - [ ] ersetzte die Auflistung der Erledigten ToDos durch eine Vue-Componente
+    - [ ] erstelle einen Event-Bus welcher die Kommunikation zwischen den verschiedenen Komponenten ermöglicht
+        + erstelle eine `event.js` Datei mit den Event-Bus Funktionen => füge diese einer `window.Event` variable hinzu
+        + Feuer ein `todo-created` Event nach dem erstellen eines Events und "höre" auf das Event in der `TaskComponent`
+          um daraufhin die Tasks neu über die API zu ziehen
+        + Feuer ein `todo-done` Event wenn eine Aufgabe in der ToDo Liste erledigt wird
+        + Reagiere auf das `todo-done` Event und ziehe dir alle erledigten aufgaben aus der Datenbank
 
 ~ ~1. Erstelle eine simple ToDo App. Die App soll es ermöglichen eine einfache ToDo-Liste zu erstellen 
    und anzuzeigen. Eine Aufgabe besteht aus einem Text und einem Datum an welchem die Task erledigt wurde.
