@@ -2,7 +2,7 @@
 ## Aufgaben
 3. Ergänze die ToDo-App mit Vuejs um die Forms dynamisch zu gestalten
     - [x] erweitere den aktuellen `todo`-view um das `app`-layout
-    - [ ] ersetzte die update form durch eine Vue-`Task`-Component
+    - [x] ersetzte die update form durch eine Vue-`Task`-Component
     - [ ] nutze die `api`-route und füge eine Task-Update route hinzu
     - [ ] füge der `api`-route eine Middleware Group hinzu
         + Hinweis: zum authentifizieren über die API wird nach einem `api_token` im request geschaut

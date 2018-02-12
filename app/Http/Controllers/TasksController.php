@@ -15,7 +15,7 @@ class TasksController extends Controller
      */
     public function index()
     {
-        $tasks = Task::where('done_at', null)->get();
+        $tasks = Task::with('creator')->where('done_at', null)->get();
         $finishedTasks = Task::finished()->get(); // whereNotNull('done_at')
 
         return view('todo', ['tasks' => $tasks, 'finishedTasks' => $finishedTasks]);
@@ -50,6 +50,7 @@ class TasksController extends Controller
     public function update(Task $task, Request $request)
     {
         $task->worker()->associate(\Auth::user());
+        
         $task->fill([
             'done_at' => $request->done ? Carbon::now() : null,
         ])->update();

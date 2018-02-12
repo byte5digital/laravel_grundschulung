@@ -6,21 +6,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2>ToDos:</h2>
-                    @foreach ($tasks as $task)
-                        <form action="{{ route('tasks.update', ['task' => $task]) }}" method="POST" class="form-inline">
-                            @csrf
-                            @method('put')
-
-                            <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
-                                <input type="checkbox" class="form-check-input" name="done">
-                                <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">{{ $task->subject }} - erstellt von <b>{{ $task->creator->name }}</b></span>
-                            </label>
-
-                            <button type="submit" class="btn btn-link">Update</button>
-
-                        </form>
-                    @endforeach
+                    <tasks :tasks="{{ $tasks }}"></tasks>
                 </div>
                 <div class="col-md-6" style="border-left: 1px solid #ddd">
                     <h2>Erstelle eine neue Aufgabe</h2>
