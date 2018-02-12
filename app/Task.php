@@ -2,10 +2,13 @@
 
 namespace App;
 
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
+    use Searchable;
+
     /**
      * @var array
      */
@@ -24,7 +27,7 @@ class Task extends Model
     {
         return $query->whereNotNull('done_at');
     }
-
+    
     /**
      * Get the creator of this task.
      *
@@ -43,5 +46,18 @@ class Task extends Model
     public function worker()
     {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array
+     */
+    public function toSearchableArray()
+    {
+        return [
+            'task' => $this->subject,
+            'creator' => $this->creator->name,
+        ];
     }
 }
