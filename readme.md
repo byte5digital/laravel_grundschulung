@@ -1,7 +1,7 @@
 # Grundschulung Laravel
 ## Aufgaben
 3. Ergänze die ToDo-App mit Vuejs um die Forms dynamisch zu gestalten
-    - [ ] erweitere den aktuellen `todo`-view um das `app`-layout
+    - [x] erweitere den aktuellen `todo`-view um das `app`-layout
     - [ ] ersetzte die update form durch eine Vue-`Task`-Component
     - [ ] nutze die `api`-route und füge eine Task-Update route hinzu
     - [ ] füge der `api`-route eine Middleware Group hinzu

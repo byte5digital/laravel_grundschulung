@@ -1,9 +1,6 @@
-<!doctype html>
-<html>
-<head>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
     <section class="mt-5">
         <div class="container">
             <div class="row">
@@ -54,12 +51,12 @@
                                 <p>
                                     {{ $task->subject }} - {{ $task->done_at->format('d.m.Y H:m:s') }} |
                                     Erledigt von <b>{{ $task->worker->name }}</b>
-                                </p></li>
+                                </p>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-</body>
-</html>
+@stop
