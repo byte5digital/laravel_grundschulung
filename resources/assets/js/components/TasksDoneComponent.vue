@@ -14,13 +14,23 @@
         /**
          * Properties passed to task component.
          */
-        props: ['tasks'],
+        props: ['data'],
+
+        data() {
+            return {
+                tasks: [],
+            }
+        },
 
         /**
-         * Task component Methods.
+         * Map data on tasks and listen for todo-done event.
          */
-        methods: {
+        created() {
+            this.tasks = this.data;
 
-        }
+            Event.listen('todo-done', task => {
+                this.tasks.push(task);
+            });
+        },
     }
 </script>

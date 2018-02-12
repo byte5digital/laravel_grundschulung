@@ -9,12 +9,12 @@
           und der `User` anhand des tokens gesucht.
     - [x] ersetzte das Formular zum erstellen einer ToDo mit einer Vue-Componente
     - [x] ersetzte die Auflistung der Erledigten ToDos durch eine Vue-Componente
-    - [ ] erstelle einen Event-Bus welcher die Kommunikation zwischen den verschiedenen Komponenten ermöglicht
+    - [x] erstelle einen Event-Bus welcher die Kommunikation zwischen den verschiedenen Komponenten ermöglicht
         + erstelle eine `event.js` Datei mit den Event-Bus Funktionen => füge diese einer `window.Event` variable hinzu
         + Feuer ein `todo-created` Event nach dem erstellen eines Events und "höre" auf das Event in der `TaskComponent`
-          um daraufhin die Tasks neu über die API zu ziehen
+          um daraufhin die Task zu den bestehenden hinzuzufügen
         + Feuer ein `todo-done` Event wenn eine Aufgabe in der ToDo Liste erledigt wird
-        + Reagiere auf das `todo-done` Event und ziehe dir alle erledigten aufgaben aus der Datenbank
+        + reagiere auf das `todo-done` Event und füge die erhaltene Task den `tasks-done` hinzu
 
 ~ ~1. Erstelle eine simple ToDo App. Die App soll es ermöglichen eine einfache ToDo-Liste zu erstellen 
    und anzuzeigen. Eine Aufgabe besteht aus einem Text und einem Datum an welchem die Task erledigt wurde.

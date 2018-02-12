@@ -36,7 +36,10 @@
                 }).then(response => {
                     this.subject = '';
                     this.errors = [];
+
+                    Event.fire('todo-created', response.data);
                 }).catch(errors => {
+                    console.log(errors);
                     this.errors = errors.response.data.errors;
                 });
             },

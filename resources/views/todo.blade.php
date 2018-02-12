@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2>ToDos:</h2>
-                    <tasks :tasks="{{ $tasks }}"></tasks>
+                    <tasks :data="{{ $tasks }}"></tasks>
                 </div>
                 <div class="col-md-6" style="border-left: 1px solid #ddd">
                     <h2>Erstelle eine neue Aufgabe</h2>
@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2>Erledigte Aufgaben:</h2>
-                    <tasks-done :tasks="{{ $finishedTasks }}"></tasks-done>
+                    <tasks-done :data="{{ $finishedTasks }}"></tasks-done>
                 </div>
             </div>
         </div>
