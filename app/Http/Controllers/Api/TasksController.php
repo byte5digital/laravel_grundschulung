@@ -10,6 +10,27 @@ use App\Http\Controllers\Controller;
 class TasksController extends Controller
 {
     /**
+     * Saves a task.
+     *
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function store(Request $request)
+    {
+        $attributes = $request->validate([
+            'subject' => 'required|min:5',
+        ]);
+
+        $task = new Task([
+            'subject' => $attributes['subject'],
+        ]);
+        $task->creator()->associate(\Auth::user());
+        $task->save();
+
+        return response()->json($task);
+    }
+
+    /**
      * @param Task $task
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse

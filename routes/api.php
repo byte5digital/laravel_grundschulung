@@ -19,4 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::middleware('auth:api')->namespace('Api')->group(function () {
     Route::put('task/{task}', 'TasksController@update');
+    Route::post('/tasks', 'TasksController@store');
 });

@@ -7,7 +7,7 @@
     - [x] füge der `api`-route eine Middleware Group hinzu
         + Hinweis: zum authentifizieren über die API wird nach einem `api_token` im request geschaut
           und der `User` anhand des tokens gesucht.
-    - [ ] ersetzte das Formular zum erstellen einer ToDo mit einer Vue-Componente
+    - [x] ersetzte das Formular zum erstellen einer ToDo mit einer Vue-Componente
     - [ ] ersetzte die Auflistung der Erledigten ToDos durch eine Vue-Componente
     - [ ] erstelle einen Event-Bus welcher die Kommunikation zwischen den verschiedenen Komponenten ermöglicht
         + erstelle eine `event.js` Datei mit den Event-Bus Funktionen => füge diese einer `window.Event` variable hinzu
