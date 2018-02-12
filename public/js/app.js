@@ -47058,7 +47058,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         onCheck: function onCheck(task) {
             axios.put('/api/task/' + task.id, {
-                'done': true
+                'done': true,
+                'api_token': App.user.api_token
             }).then(function (response) {
                 return console.log(response);
             });

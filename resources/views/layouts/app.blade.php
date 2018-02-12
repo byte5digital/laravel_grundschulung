@@ -12,6 +12,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Global App Object -->
+    <script>
+        window.App = <?php echo json_encode(array_merge([
+            'user' => \Auth::user(),
+        ])); ?>;
+    </script>
 </head>
 <body>
     <div id="app">

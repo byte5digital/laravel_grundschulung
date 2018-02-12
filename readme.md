@@ -4,7 +4,7 @@
     - [x] erweitere den aktuellen `todo`-view um das `app`-layout
     - [x] ersetzte die update form durch eine Vue-`Task`-Component
     - [x] nutze die `api`-route und füge eine Task-Update route hinzu
-    - [ ] füge der `api`-route eine Middleware Group hinzu
+    - [x] füge der `api`-route eine Middleware Group hinzu
         + Hinweis: zum authentifizieren über die API wird nach einem `api_token` im request geschaut
           und der `User` anhand des tokens gesucht.
     - [ ] ersetzte das Formular zum erstellen einer ToDo mit einer Vue-Componente

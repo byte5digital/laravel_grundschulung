@@ -24,6 +24,7 @@
             onCheck (task) {
                 axios.put('/api/task/'+task.id, {
                     'done': true,
+                    'api_token': App.user.api_token,
                 }).then(response => console.log(response));
             },
         }
