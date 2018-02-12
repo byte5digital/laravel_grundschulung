@@ -16,15 +16,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2>Erledigte Aufgaben:</h2>
-                    <ul>
-                        @foreach ($finishedTasks as $task)
-                            <li>
-                                <p>
-                                    {{ $task->subject }} - {{ $task->done_at->format('d.m.Y H:m:s') }} |
-                                    Erledigt von <b>{{ $task->worker->name }}</b>
-                                </p></li>
-                        @endforeach
-                    </ul>
+                    <tasks-done :tasks="{{ $finishedTasks }}"></tasks-done>
                 </div>
             </div>
         </div>

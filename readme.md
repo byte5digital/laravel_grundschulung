@@ -8,7 +8,7 @@
         + Hinweis: zum authentifizieren über die API wird nach einem `api_token` im request geschaut
           und der `User` anhand des tokens gesucht.
     - [x] ersetzte das Formular zum erstellen einer ToDo mit einer Vue-Componente
-    - [ ] ersetzte die Auflistung der Erledigten ToDos durch eine Vue-Componente
+    - [x] ersetzte die Auflistung der Erledigten ToDos durch eine Vue-Componente
     - [ ] erstelle einen Event-Bus welcher die Kommunikation zwischen den verschiedenen Komponenten ermöglicht
         + erstelle eine `event.js` Datei mit den Event-Bus Funktionen => füge diese einer `window.Event` variable hinzu
         + Feuer ein `todo-created` Event nach dem erstellen eines Events und "höre" auf das Event in der `TaskComponent`
