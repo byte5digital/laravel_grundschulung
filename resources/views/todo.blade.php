@@ -37,8 +37,7 @@
                                 <p>
                                     {{ $task->subject }} - {{ $task->done_at->format('d.m.Y H:m:s') }} |
                                     Erledigt von <b>{{ $task->worker->name }}</b>
-                                </p>
-                            </li>
+                                </p></li>
                         @endforeach
                     </ul>
                 </div>
