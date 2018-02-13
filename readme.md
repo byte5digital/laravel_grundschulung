@@ -4,7 +4,7 @@
     - [x] Einrichtung des [`spatie/searchindex`](https://github.com/spatie/searchindex) packages
         + braucht auch `composer require elasticsearch/elasticsearch "^1.3"`
     - [x] Indexierung der vorhandenen Daten via `tinker` / on create
-    - [ ] Vue-`SearchComponent` erstellen welche über die API sucht
+    - [x] Vue-`SearchComponent` erstellen welche über die API sucht
     
 
 ~ ~1. Erstelle eine simple ToDo App. Die App soll es ermöglichen eine einfache ToDo-Liste zu erstellen 

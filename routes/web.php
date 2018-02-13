@@ -19,6 +19,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/tasks', 'TasksController@index')->name('tasks');
     Route::post('/tasks', 'TasksController@store')->name('tasks.store');
     Route::put('/task/{task}', 'TasksController@update')->name('tasks.update');
+
+    Route::get('/search', 'SearchController@index')->name('search');
 });
 
 Auth::routes();

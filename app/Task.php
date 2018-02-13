@@ -27,6 +27,32 @@ class Task extends Model implements SearchableContract
     }
 
     /**
+     * Search for a project.
+     *
+     * @param $searchTerm
+     * @return mixed
+     */
+    public static function search($searchTerm)
+    {
+        $query = [
+            'body' => [
+                'query' => [
+                    "query_string" => [
+                        "fields" => ['task', 'creator'],
+                        "query" => '%'.$searchTerm.'%'
+                    ],
+                ]
+            ]
+        ];
+
+        $modelIds = collect(\SearchIndex::getResults($query)['hits']['hits'])->map(function ($data) {
+            return $data['_id'];
+        });
+
+        return self::whereIn('id', $modelIds);
+    }
+
+    /**
      * Get the creator of this task.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
