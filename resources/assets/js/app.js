@@ -20,6 +20,7 @@ window.Event = new Event();
 Vue.component('tasks', require('./components/TasksComponent.vue'));
 Vue.component('task-create', require('./components/TaskCreateComponent.vue'));
 Vue.component('tasks-done', require('./components/TasksDoneComponent.vue'));
+Vue.component('tasks-search', require('./components/TasksSearchComponent.vue'));
 
 const app = new Vue({
     el: '#app'

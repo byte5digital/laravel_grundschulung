@@ -3,7 +3,7 @@
 4. Im 4. Part erweitern wir die ToDo-App um eine Suchfunktion
     - [x] Einrichtung des [`tamayo/laravel-scout-elastic`](https://github.com/ErickTamayo/laravel-scout-elastic) packages
     - [x] Indexierung der vorhandenen Daten via `scout:import`
-    - [ ] Vue-`SearchComponent` erstellen welche über die API sucht
+    - [x] Vue-`SearchComponent` erstellen welche über die API sucht
     
 
 ~ ~1. Erstelle eine simple ToDo App. Die App soll es ermöglichen eine einfache ToDo-Liste zu erstellen 

@@ -21,7 +21,7 @@
     </script>
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="flex flex-col min-h-screen">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -66,7 +66,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="flex flex-col flex-1 py-4">
             @yield('content')
         </main>
     </div>
