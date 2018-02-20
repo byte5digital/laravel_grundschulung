@@ -27,7 +27,7 @@ class Task extends Model
     {
         return $query->whereNotNull('done_at');
     }
-    
+
     /**
      * Get the creator of this task.
      *
