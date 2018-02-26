@@ -57,4 +57,4 @@
     - [ ] Vue-`SearchComponent` erstellen welche über die API sucht
         
 ## Lösungen
-Lösungen können hier nachgeschaut werden [#43c50e20db3db3935b4a6e2bad7b9c63](https://gist.github.com/Naoray/43c50e20db3db3935b4a6e2bad7b9c63)
+Lösungen können hier nachgeschaut werden [#Solutions](https://gist.github.com/Naoray/43c50e20db3db3935b4a6e2bad7b9c63)
